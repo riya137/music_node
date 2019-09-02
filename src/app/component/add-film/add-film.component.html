@@ -1,0 +1,65 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div *ngIf="isLoading" style="text-align: center">
+                <app-loading-spinner></app-loading-spinner>
+            </div>
+            <div class="header">
+                <h2>Add New Film</h2>
+            </div>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm)" class="form">
+                <div>
+            
+                    <div class="form-group">
+                        <label>Film Id</label>
+                        <input type="text" formControlName="id" id="id" class="form-control">
+                        <span class="help-block"
+                            *ngIf="!signupForm.get('id').valid && signupForm.get('id').touched ">Please enter Film Id</span>
+                    </div>
+                    
+                    <div class="film_name">
+                        <label>Film Name</label>
+                        <input type="text" formControlName="film_name" class="form-control">
+                        
+                        <span class="help-block"
+                            *ngIf="!signupForm.get('film_name').valid && signupForm.get('film_name').touched ">Please enter film Name</span>
+                    </div>
+                    <div class="songId">
+                        <label>song Id</label>
+                        <input type="text" formControlName="songId" class="form-control">
+                        <!----<span class="help-block"
+                            *ngIf="passwordMatchValidator && signupForm.get('password1').touched">Password Does not
+                            match</span>-->
+
+                    </div>
+                    <div class="song_name">
+                        <label>song Name</label>
+                        <input type="text" formControlName="song_name" class="form-control">
+                        <!----<span class="help-block"
+                            *ngIf="passwordMatchValidator && signupForm.get('password1').touched">Password Does not
+                            match</span>-->
+
+                    </div>
+
+                    <div class="song_name">
+                        <label>Film Image</label>
+                        <input type="file" formControlName="film_image" class="form-control" (change)="onFileSelected($event)">
+                        <!----<span class="help-block"
+                            *ngIf="passwordMatchValidator && signupForm.get('password1').touched">Password Does not
+                            match</span>-->
+
+                    </div>
+                    
+                </div>
+
+                <button class="btn" [disabled]="!signupForm.valid"
+                    type="submit">Add </button>
+                <br>
+               
+
+            </form>
+
+        </div>
+    </div>
+    <hr>

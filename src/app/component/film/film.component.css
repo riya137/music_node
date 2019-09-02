@@ -1,0 +1,16 @@
+.list-group-item:hover{
+    background-color:black;
+ }
+ 
+ .list-group-item b:hover{
+     color:white;
+ }
+
+ .list-group-item b{
+    color:black;
+    text-align: center;
+    
+}
+.img-responsive{
+    width: 100%;
+}

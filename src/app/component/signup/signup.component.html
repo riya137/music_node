@@ -1,0 +1,66 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div *ngIf="isLoading" style="text-align: center">
+                <app-loading-spinner></app-loading-spinner>
+            </div>
+            <div class="alert alert-danger" style="text-align: center" *ngIf=error>
+                <p>{{errorMessage}}</p>
+            </div>
+            <div class="header">
+                <h2>{{isLoggedIn ? 'Login'  : 'Register'}}</h2>
+            </div>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm)" class="form">
+                <div>
+
+                     <!----<div class="form-group" *ngIf="!isLoggedIn">
+                        <label>User Name</label>
+                        <input type="text" id="user" formControlName="username"  class="form-control">
+                        <span class="help-block"
+                        *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched "
+                        >Username must be between 6 to 20 Characters only.</span>
+                    </div>-->
+            
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" id="email" class="form-control">
+                        <span class="help-block"
+                            *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched ">Please enter
+                            email in Valid Format</span>
+                    </div>
+                    
+                    <div class="password">
+                        <label>Password</label>
+                        <input [type]="passwordType" formControlName="password" class="form-control">
+                        <span class="glyphicon glyphicon-eye-open" (click)="passwordToggle()" [ngClass]={eye_chnge:eye_color}> </span>
+
+                        <span class="help-block"
+                            *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched ">Passwrod
+                            must contain atleast one Lowercase and one digit</span>
+                    </div>
+                    <div class="confirm_password" *ngIf="!isLoggedIn">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="password1" class="form-control">
+                        <!----<span class="help-block"
+                            *ngIf="passwordMatchValidator && signupForm.get('password1').touched">Password Does not
+                            match</span>-->
+
+                    </div>
+
+
+
+                </div>
+
+                <button class="btn" [disabled]="!signupForm.valid"
+                    type="submit">{{isLoggedIn ? 'Login'  : 'Register'}}</button>
+                <br>
+                <p *ngIf="isLoggedIn">New User..?</p>
+                <p *ngIf="!isLoggedIn">Alreadry Registered..?</p>
+                <a (click)="onSwitchMode()">{{isLoggedIn ? 'Register' : 'Login'}}</a>
+
+            </form>
+
+        </div>
+    </div>
+    <hr>

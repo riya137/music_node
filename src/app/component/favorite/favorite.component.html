@@ -1,0 +1,19 @@
+<div class="col-md-12 col-xs-12 col-sm-12">
+    <div *ngFor="let f of films">
+        <div *ngFor="let film of f.song_list">
+            <div *ngIf="(f.id)===filmID">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 routerLink="{{film.songId}}"><b>{{film.song_name}}</b></h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <button routerLink="/film" class="btn btn-primary">Add more Songs</button>
+    </div>
+</div>

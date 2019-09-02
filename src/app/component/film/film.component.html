@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">  
+            <div *ngFor="let film of films | filter:username" routerLink="./{{film.id}}">
+                <div class="col-md-3 col-xs-4 col-sm-3 list-group-item ">
+                         <img [src]=film.film_image class="img-responsive ">
+                         <h4><b>{{film.film_name}}</b></h4>   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <router-outlet></router-outlet>
+         </div>
+    </div>
+</div>

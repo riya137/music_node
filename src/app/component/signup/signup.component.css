@@ -1,0 +1,47 @@
+input.ng-invalid.ng-touched{
+    border:1px solid red;
+}
+.help-block{
+    color: red;
+}
+.form  {
+	width: 40%;
+	margin:0px auto;
+	padding:20px;
+	border: 2px solid #B0C4DE;
+	background:white;
+	border-radius:0px 0px 10px 10px; 
+}
+.header {
+	width:40%;
+	margin: 30px auto 0px;
+	color:grey;
+	background:black;
+	text-align: center;
+	border: 1px solid #811a34;
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    opacity: 1px;
+}
+.header h2:hover{
+    color:white;
+}
+.btn 
+{ 
+background-color:black; 
+color:white; 
+
+width:100px;
+height: 60px;
+} 
+.alert-danger{
+	width:40%;
+	margin: 30px auto 0px; 
+}
+.eye_chnge{
+	color: grey;
+}
+.glyphicon-eye-open{
+	font-size: 20px;
+}

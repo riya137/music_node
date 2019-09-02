@@ -1,0 +1,32 @@
+*{
+    outline-color: black;
+}
+.play_song{
+    background-color: black;
+}
+.glyphicon-heart{
+    font-size: 30px;
+    text-align: center;
+}
+.heart{
+   color:blue;
+
+}
+.glyphicon-thumbs-up{
+    padding-left:30px;
+    font-size: 30px;
+    text-align: center;
+}
+.like{
+   color:blue;
+
+}
+.glyphicon-thumbs-down{
+    padding-left:30px;
+    font-size: 30px;
+    text-align: center;
+}
+.dislike{
+   color:blue;
+
+}

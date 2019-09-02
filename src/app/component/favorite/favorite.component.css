@@ -1,0 +1,14 @@
+
+ 
+ .list-group-item b:hover{
+     color:gray;
+ }
+
+ .list-group-item b{
+    color:black;
+    text-align: center;
+    
+}
+.img-responsive{
+    width: 100%;
+}

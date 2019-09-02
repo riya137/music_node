@@ -1,0 +1,9 @@
+<form  [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm)">
+  <div>
+    <input type="file" formControlName="image" (change)="onFileSelected($event)">
+  </div>
+  <div>
+    <input  type="text" formControlName="name" placeholder="Name">
+    <button type="submit" name="upload">POST</button>
+  </div>
+</form>

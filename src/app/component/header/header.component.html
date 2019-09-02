@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-xs-10 col-sm-10">
+            <a><img src="assets/images/index.png" width=auto height="80" class="img=responsive"></a>
+        </div>
+        <div class="col-md-2 col-xs-2 col-sm-2">
+           <h3>Reah Neema</h3>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-inverse mynavbar">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a routerLink=""><b>Home</b></a></li>
+        <li><a routerLink="/about"><b>About</b></a></li>
+        <li><a routerLink="/contact"><b>Contact</b></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="!isAuthenticated"><a routerLink="/signup"><b>Sign Up</b><span class="glyphicon glyphicon-user"></span></a></li>
+        <li *ngIf="isAuthenticated"><a (click)="onLogout()"><b>Logout</b></a></li>
+
+      </ul>
+    </div>
+  </nav>
+    
+  
